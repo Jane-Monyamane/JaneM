@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:theapp/screens/profile_screen.dart';
+import 'package:theapp/screens/liveFeed_screen.dart';
 import 'package:theapp/screens/savedVideo_screen.dart';
 import 'package:theapp/screens/signin_screen.dart';
 
@@ -28,13 +28,13 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text("Dashboard"),
         centerTitle: true,
         backgroundColor: Colors.blue[100],
-        actions: [
+        /*actions: [
           IconButton(
             icon: Icon(Icons.comment),
             tooltip: 'Comment Icon',
             onPressed: () {},
           ),
-        ],
+        ],*/
       ),
       body: Center(
         child: Column(
@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SignInScreen()),
+                  MaterialPageRoute(builder: (context) => LiveFeedScreen()),
                 );
               },
             ),
@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()),
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
                   );
                 },
               ),
